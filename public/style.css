@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    position: relative;
+    top: 2.5rem;
+    margin-bottom: 5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    height: 40rem;
+}
+
+/* .listing-link {
+    text-decoration: none !important;
+} */
+
+.cards {
+    width: 90%;
+    /* background-color: aliceblue; */
+    background-color: white;
+    display: flex;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.card {
+    /* height: 28.5rem !important; */
+    width: 25rem !important;
+    background-color: aliceblue !important;
+    border: none !important;
+    margin-left: 2.5rem;
+    margin-top: 2.5rem !important;
+}
+
+.card-body {
+    width: 100% !important;
+}
+
+.card-img-top {
+    margin-top: 0.25rem;
+    border-top-right-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.card-detail-btn {
+    color: #0dcaf0 !important;
+    border: 2px solid #0dcaf0 !important;
+    background-color: #f2f2f2 !important;
+    margin-top: 0.5rem !important;
+    /* display: inline-block; */
+    margin-left: 1rem;
+    position: relative;
+    left: 0.75rem;
+    /* bottom: 0.65rem; */
+}
+
+.card-detail-btn:hover {
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0) !important;
+    background-color: #0dcaf0 !important;
+}
+
+.card-buy-btn {
+    margin-top: 0.5rem !important;
+    /* display: inline-block; */
+    margin-left: 1rem !important;
+    position: relative;
+    left: 4rem;
+    /* bottom: 0.65rem; */
+}
+
+.card-text{
+    margin-top: 0.5rem !important;
+    margin-bottom: 0;
+}
+
+/* .card-header {
+    border: none !important;
+    display: inline-block;
+    background-color: aliceblue !important;
+    border-radius: 7.5px; */
+/* border-radius: ; */
+/* } */
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    background-color: white;
+    opacity: 0.175;
+}
+
+.show-pg-card {
+    height: 40rem !important;
+    width: 40% !important;
+    background-color: aliceblue;
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+
+.show-card-img {
+    width: 85%;
+    margin-right: 7.5%;
+    margin-left: 7.5%;
+    margin-top: 2.5rem;
+    border-radius: 15px;
+}
+
+.show-card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.show-card-desc {
+    text-align: center;
+}
+
+.show-card-price {
+    text-align: center;
+}
+
+.show-dropdown {
+    width: 60%;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-buy-btn {
+    display: flex !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.mentor-h2 {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.drop-content {
+    background-color: greenyellow !important;
+}
+
+.show-more-info {
+    height: 40rem;
+}
+
+.show-form {
+    margin-top: 6rem !important;
+}
+
+.show-pg-form-label {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hack-apply{
+    position: relative;
+    left: 12.5rem !important;
+}
+
+#hack-new{
+    position: absolute !important;
+    right: 7.5rem;
+}
+
+.apply-div{
+    height: 10rem;
+    position: relative;
+    top: 4rem;
+}
+
+.admin-data{
+    background-color: aliceblue !important;
+    /* height: 25rem !important; */
+    width: 25% !important;
+    border-radius: 5px !important;
+    margin-top: 2.5rem !important;
+    /* margin-left: 2.5rem; */
+    border-radius: 10px !important;
+}
+
+.admin-data>p{
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.admin-datas,.admin-title{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#admin-btn{
+    position: relative;
+    left: 60%;
+}

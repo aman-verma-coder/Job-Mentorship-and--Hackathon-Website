@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Program</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h2 class="mentor-h2">Get Mentorship by Top Experts</h2>
+    <div class="show-pg-card">
+        <img src="<%= showData.image %>" alt="#" class="show-card-img">
+        <h4 class="show-card-title">
+            <%= showData.title %>
+        </h4>
+        <p class="show-card-desc">
+            <%= showData.description %>
+        </p>
+        <p class="show-card-price">Price: <%= showData.price %>
+        </p>
+        <form method="post" action="/mentor/<%= showData.id %>/buy">
+            <select name="Mentor" id="mentor" class="form-select show-dropdown">
+                <option value="selected" selected>Choose your Mentor</option>
+                <% for (const mentor of allMentors) { %>
+                    <option value="<%= mentor.name %>">
+                        <%= mentor.name %>
+                    </option>
+                    <% } %>
+            </select>
+            <br>
+            <button type="submit" class="btn btn-outline-success show-buy-btn">Buy Now</button>
+        </form>
+    </div>
+    <div class="show-more-info"></div>
+    <div class="show-form row col-8 offset-2">
+        <h3>Contact us for more any queries</h3>
+        <div class="form-text">We'll get back to you.</div>
+        <form method="post" action="/mentor/show/contact">
+            <div class="mb-3">
+                <label for="show-name" class="form-label show-pg-form-label">Name: </label>
+                <input type="text" class="form-control" id="show-name" placeholder="Enter Name">
+            </div>
+            <div class="mb-3">
+                <label for="show-email" class="form-label show-pg-form-label">Email: </label>
+                <input type="email" class="form-control" id="show-email" placeholder="Enter Email">
+            </div>
+            <div class="mb-3">
+                <label for="show-mob-no" class="form-label show-pg-form-label">Contact Number: </label>
+                <input type="number" class="form-control" id="show-mob-no" placeholder="Enter Contact No.">
+                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+            </div>
+            <div class="mb-3">
+                <label for="show-city" class="form-label show-pg-form-label">City: </label>
+                <input type="text" class="form-control" id="show-city" placeholder="Enter City">
+            </div>
+            <div class="mb-3">
+                <label for="show-state" class="form-label show-pg-form-label">State: </label>
+                <input type="text" class="form-control" id="show-state" placeholder="Enter State">
+            </div>
+            <div class="mb-3">
+                <label for="show-country" class="form-label show-pg-form-label">Country: </label>
+                <input type="text" class="form-control" id="show-country" placeholder="Enter Country">
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+    </div><br><br><br><br><br><br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

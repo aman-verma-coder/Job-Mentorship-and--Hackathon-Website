@@ -1,0 +1,266 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+#navbar {
+    margin-top: 0 !important;
+    height: 4rem;
+    width: 100% !important;
+    background-color: #E3F2FD !important;
+    position: fixed;
+    z-index: 1;
+}
+
+.container-fluid {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+}
+
+.home-title {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+#navbarNav {
+    display: flex;
+    width: 75%;
+}
+
+.middle {
+    width: 75%;
+}
+
+.middle>ul>li {
+    margin-right: 3.25rem !important;
+}
+
+.middle>ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logsign {
+    width: 25%;
+}
+
+.logsign>ul>li {
+    margin-left: 2rem !important;
+}
+
+.logsign>ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item>a:hover {
+    font-size: 1.025rem;
+    font-weight: 500;
+}
+
+/* .navbar {
+    width: 100%; */
+/* background-color: black !important; */
+/* height: 4rem;
+} */
+
+/* #navbar {
+    background-color: black !important;
+} */
+
+/* .container-fluid {
+    height: 100%;
+    background-color: #E3F2FD;
+}
+
+.navbar-expand-lg {
+    height: 100%;
+    background-color: #E3F2FD;
+    width: 100%;
+}
+
+.bg-body-tertiary {
+    height: 100%;
+    background-color: #E3F2FD;
+}
+
+.home-title {
+    width: 20%;
+    margin-left: 2.5rem !important;
+}
+
+.home-title>a {
+    font-weight: 500;
+}
+
+.nav-item>a {
+    font-weight: 400;
+}
+
+.nav-item>a:hover {
+    font-weight: 500;
+    font-size: 1..25rem;
+    z-index: 1 !important;
+}
+
+.navbar-collapse {
+    width: 40%;
+    position: absolute;
+}
+
+.logsign {
+    width: 20%;
+    display: flex;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.middle>ul {
+    width: 50%; */
+/* position: absolute;
+    right: 2rem; */
+/* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+} */
+
+.green {
+    color: green;
+}
+
+.home-animation-n-image {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+}
+
+.animate-box-inner {
+    margin: 2.5rem !important;
+    margin-left: 5rem !important;
+    width: 35%;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 7.5% !important;
+}
+
+.home-image{
+    margin: 2.5rem !important;
+    margin-right: 5rem !important;
+    width: 27.5%;
+    height: max-content;
+    display: flex;
+}
+
+.home-image>img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* .animate-box-inner {
+    font-size: 1.75rem;
+    margin-top: 7.5rem !important;
+    margin-left: 10rem !important;
+}
+
+.home-image img {
+    position: absolute;
+    right: 15rem !important;
+    height: 27.5rem;
+    border-radius: 15px;
+}
+
+.home-animation-n-image {
+    margin-top: 4rem !important;
+    height: 31.5rem;
+    width: 100%;
+    display: flex;
+} */
+
+.home-data {
+    width: 100%;
+    /* height: 25rem; */
+}
+
+.home-data-card {
+    margin-top: 2.5rem !important;
+    width: 90%;
+    height: 25rem;
+    display: flex;
+    background-color: aliceblue;
+    /* justify-content: center !important; */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 20px;
+}
+
+.home-data-card-info {
+    margin-top: 2.5rem;
+    width: 25%;
+    position: relative;
+    left: 5%;
+    top: 2.5rem;
+    height: 10rem !important;
+}
+
+.home-data-card>div>img {
+    /* position: absolute; */
+    background-color: black !important;
+    position: relative;
+    left: 80%;
+    top: 1.75rem;
+    /* right: 5% !important; */
+    /* height: 25rem !important; */
+    /* margin-left: 10% !important; */
+    /* margin-right: auto !important; */
+    width: 42.5% !important;
+    border-radius: 10px;
+}
+
+.home-data-card2 {
+    margin-top: 2.5rem !important;
+    width: 90%;
+    height: 25rem;
+    display: flex;
+    background-color: aliceblue;
+    /* justify-content: center !important; */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 20px;
+}
+
+.home-data-card-info2 {
+    margin-top: 2.5rem;
+    width: 25%;
+    position: relative;
+    left: 72.5%;
+    top: 2.5rem;
+    height: 10rem !important;
+}
+
+.home-data-card2>div>img {
+    /* position: absolute; */
+    /* background-color: black !important; */
+    position: relative;
+    right: 36%;
+    top: 1.75rem;
+    /* right: 5% !important; */
+    /* height: 25rem !important; */
+    /* margin-left: 10% !important; */
+    /* margin-right: auto !important; */
+    width: 42.5% !important;
+    border-radius: 10px;
+}

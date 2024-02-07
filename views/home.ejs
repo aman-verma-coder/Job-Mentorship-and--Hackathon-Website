@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Learning Platform by QuadCore</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <div class="container-fluid">
+            <div class="home-title">
+                <a class="navbar-brand" href="#">Integrated Learning Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="middle">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/mentor">Mentorship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/hackathon">Search Hackathons</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logsign">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><br><br><br><br>
+    <div class="home-animation-n-image">
+        <div class="animate-box-inner" id="left-box">
+            <span class="black">Here you can</span>
+            <!-- Element to contain animated typing -->
+            <span id="element"></span>
+        </div>
+        <div class="home-image">
+            <img src="https://i.postimg.cc/pLzYcr4q/534b3662-6b98-4d4a-8a69-0d68865d29c8.jpg" alt="">
+        </div>
+    </div>
+    <div class="home-data">
+        <div class="home-data-card">
+            <div class="home-data-card-info">
+                <h5>Find your mentor</h5>
+                <p>Here you can find mentor according to your profession and your need</p>
+            </div>
+            <div class="home-data-card-image">
+                <img src="https://i.postimg.cc/QtR0sSHZ/154c23e6-979e-412a-9433-b899232eb214.jpg" alt="">
+            </div>
+        </div>
+        <div class="home-data-card2">
+            <div class="home-data-card-info2">
+                <h5>Generate Course</h5>
+                <p>Here you can generate a course using Artificial Intelligence</p>
+            </div>
+            <div class="home-data-card-image2">
+                <img src="https://i.postimg.cc/GpgXgbR2/483a1c6d-daee-4c7e-aa45-a503a59a7750.jpg alt="">
+            </div>
+        </div>
+        <div class=" home-data-card">
+                <div class="home-data-card-info">
+                    <h5>Ask Genius</h5>
+                    <p>Here you can ask your questions and AI will answer it</p>
+                </div>
+                <div class="home-data-card-image">
+                    <img src="https://i.postimg.cc/ryrfg6PV/522a4726-447b-4d32-a82f-2eb6efda0c7e.jpg" alt="">
+                </div>
+            </div>
+            <div class="home-data-card2">
+                <div class="home-data-card-info2">
+                    <h5>Search Jobs</h5>
+                    <p>Here you can serach and apply for Jobs</p>
+                </div>
+                <div class="home-data-card-image2">
+                    <img src="https://i.postimg.cc/xTVt4swK/57023a11-d2fb-4d9d-aca3-7c355f403748.jpg" alt="">
+                </div>
+            </div>
+            <div class="home-data-card">
+                <div class="home-data-card-info">
+                    <h5>Find Hackathons</h5>
+                    <p>Here you can search and apply for Hackathons</p>
+                </div>
+                <div class="home-data-card-image">
+                    <img src="https://i.postimg.cc/2yhT5vZb/639c819b-a623-437a-bde1-913217ea945d.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<span class="green">Ask Genius for your queries</span>', '<span class="green">Generate a course using AI</span>', '<span class="green">Find a Job</span>', '<span class="green">Find a mentor</span>', '<span class="green">Search for a Hackathon</span>'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
