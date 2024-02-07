@@ -4,6 +4,7 @@ const port = 8080;
 const mongoose = require("mongoose");
 const path = require("path");
 const mongo_url = 'mongodb://127.0.0.1:27017/mentorship';
+// const mongo_url = process.env.ATLASDB_URL;
 const Listing = require("./models/listings.js");
 const Mentor = require("./models/mentorListing.js");
 const Contact = require("./models/contactListing.js");
@@ -134,7 +135,7 @@ app.post("/hackathon/admin/verification", async (req, res) => {
     if (admindata.email == "admin@gmail.com" && admindata.password == "adminbro") {
         const admindata = await Appliedforhackathon.find({});
         console.log(`For Admin: ${admindata}`);
-        res.render("adminpage.ejs",{admindata});
+        res.render("adminpage.ejs", { admindata });
     } else {
         res.send("Something Wrong");
     }
