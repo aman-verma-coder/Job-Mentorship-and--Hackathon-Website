@@ -11,6 +11,7 @@ const Contact = require("./models/contactListing.js");
 const Hack = require("./models/hackathonListing.js");
 const Appliedforhackathon = require("./models/applyListing.js");
 const { name } = require("ejs");
+const ejsMate = require('ejs-mate');
 
 main()
     .then(() => { console.log("Connection Successful") })
@@ -30,6 +31,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
+app.engine('ejs', ejsMate);
 
 // app.get("/", async (req, res) => {
 //     res.send("Response Received");
@@ -142,6 +144,10 @@ app.post("/hackathon/admin/verification", async (req, res) => {
     // // console.log(abcd);
     // res.send(`Hello ${newapplier.name}. You have successfully applied for the hackathon`);
     // res.redirect("http://localhost:8080/hackathon");
+})
+
+app.get("/signup", (req, res) => {
+    res.render("signup.ejs");
 })
 
 app.listen(port, () => {
