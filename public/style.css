@@ -242,9 +242,10 @@
 }
 
 .hackapply,
-.hacknew {
+.hacknew,
+.signup {
     /* background-color: black; */
-    width: 75% !important;
+    width: 32.5rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -257,7 +258,17 @@
     text-align: center;
 }
 
+.signup>h2 {
+    text-align: center;
+}
+
 .hackapply>form>div>input {
+    border: 2px solid #e0e4e4 !important;
+    height: 2.5rem;
+    margin-top: 0.25rem !important;
+}
+
+.signup>form>div>input {
     border: 2px solid #e0e4e4 !important;
     height: 2.5rem;
     margin-top: 0.25rem !important;
@@ -282,6 +293,15 @@
 }
 
 .hacknew>form>button {
+    height: 2.5rem;
+    width: 5rem;
+}
+
+.signup>form>div>div{
+    margin-top: 0.4rem !important;
+}
+
+.signup>form>button {
     height: 2.5rem;
     width: 5rem;
 }

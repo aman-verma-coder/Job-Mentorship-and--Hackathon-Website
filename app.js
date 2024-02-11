@@ -150,6 +150,12 @@ app.get("/signup", (req, res) => {
     res.render("signup.ejs");
 })
 
+app.post("/signup", async (req, res) => {
+    let signupdata = await req.body;
+    console.log(signupdata);
+    res.send("Welcome");
+})
+
 app.listen(port, () => {
     console.log(`You are listening on ${port}`);
 });
