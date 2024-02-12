@@ -153,7 +153,7 @@ app.get("/signup", (req, res) => {
 app.post("/signup", async (req, res) => {
     let signupdata = await req.body;
     console.log(signupdata);
-    res.send("All Okay");
+    res.send("All Ok");
 })
 
 app.listen(port, () => {
