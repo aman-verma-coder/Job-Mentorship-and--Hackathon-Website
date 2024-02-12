@@ -6,15 +6,25 @@
             <form method="post" action="/signup">
                 <div class="mb-3">
                     <label for="signupname" class="form-label">Name:</label>
-                    <input type="text" class="form-control" name="name" id="signupname" aria-describedby="signupname" placeholder="Enter Your Name">
+                    <input type="text" class="form-control" name="name" id="signupname" aria-describedby="signupname"
+                        placeholder="Enter Your Name">
                 </div>
                 <div class="mb-3">
                     <label for="signupname" class="form-label">Contact Number:</label>
-                    <input type="number" class="form-control" name="contact" id="signupname" aria-describedby="signupname" placeholder="Enter Your Contact Number">
+                    <input type="number" class="form-control" name="contact" id="signupname"
+                        aria-describedby="signupname" placeholder="Enter Your Contact Number">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address:</label>
-                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                    <label for="accounttype" class="form-label">Account Type:</label>
+                    <select class="form-control" name="account" id="accounttype" aria-describedby="accounttype">
+                        <option value="selected">Choose account type</option>
+                        <option value="">Recruiter</option>
+                        <option value="">Applier</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter Your Email">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">

@@ -274,6 +274,12 @@
     margin-top: 0.25rem !important;
 }
 
+.signup>form>div>select {
+    border: 2px solid #e0e4e4 !important;
+    height: 2.5rem;
+    margin-top: 0.25rem !important;
+}
+
 .hacknew>form>div>input {
     border: 2px solid #e0e4e4 !important;
     height: 2.5rem;
@@ -297,7 +303,7 @@
     width: 5rem;
 }
 
-.signup>form>div>div{
+.signup>form>div>div {
     margin-top: 0.4rem !important;
 }
 
