@@ -158,6 +158,10 @@ app.post("/signup", async (req, res) => {
     res.send("All Ok");
 })
 
+app.get("/login", (req, res) => {
+    res.render("login.ejs");
+})
+
 app.listen(port, () => {
     console.log(`You are listening on ${port}`);
 });
