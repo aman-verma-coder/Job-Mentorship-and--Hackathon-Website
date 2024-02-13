@@ -12,6 +12,7 @@ const Hack = require("./models/hackathonListing.js");
 const Appliedforhackathon = require("./models/applyListing.js");
 const { name } = require("ejs");
 const ejsMate = require('ejs-mate');
+const User = require("./models/usersignup.js");
 
 main()
     .then(() => { console.log("Connection Successful") })
@@ -151,8 +152,9 @@ app.get("/signup", (req, res) => {
 })
 
 app.post("/signup", async (req, res) => {
-    let signupdata = await req.body;
+    let signupdata = new User(req.body);
     console.log(signupdata);
+    signupdata.save();
     res.send("All Ok");
 })
 
