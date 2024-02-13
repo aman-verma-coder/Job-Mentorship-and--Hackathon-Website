@@ -162,6 +162,24 @@ app.get("/login", (req, res) => {
     res.render("login.ejs");
 })
 
+app.post("/login", async (req, res) => {
+    let logindata = req.body;
+    let userinfo = await User.findOne({ email: logindata.email });
+    console.log(userinfo);
+    console.log(logindata.password);
+    if (userinfo) {
+        console.log(userinfo.password);
+        if ((userinfo.email == logindata.email) && (userinfo.password == logindata.password)) {
+            res.send("All Ok");
+        } else {
+            res.send("Incorrect Email or Password");
+        }
+    } else {
+        res.send("User not found");
+    }
+    // res.send("All Ok");
+})
+
 app.listen(port, () => {
     console.log(`You are listening on ${port}`);
 });
