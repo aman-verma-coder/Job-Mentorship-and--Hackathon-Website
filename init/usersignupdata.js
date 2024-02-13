@@ -5,7 +5,7 @@ const sampleUser = [
         account: "Applier",
         email: "9330nama@gmail.com",
         password: "Namabive1234@"
-    },
+    }
 ];
 
 module.exports = { data: sampleUser };

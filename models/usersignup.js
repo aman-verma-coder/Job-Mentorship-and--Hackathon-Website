@@ -7,7 +7,7 @@ const data = new mongoose.Schema({
         type: String,
         required: true
     },
-    number: {
+    contact: {
         type: Number,
         required: true
     },
