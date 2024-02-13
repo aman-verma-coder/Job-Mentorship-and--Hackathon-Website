@@ -25,5 +25,5 @@ const data = new mongoose.Schema({
     }
 });
 
-const Appliedforhackathon = mongoose.model("Appliedforhackathon", data);
-module.exports = Appliedforhackathon;
+const User = mongoose.model("User", data);
+module.exports = User;
