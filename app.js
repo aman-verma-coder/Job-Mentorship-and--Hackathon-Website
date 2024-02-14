@@ -153,9 +153,15 @@ app.get("/signup", (req, res) => {
 
 app.post("/signup", async (req, res) => {
     let signupdata = new User(req.body);
-    console.log(signupdata);
-    signupdata.save();
-    res.send("All Ok");
+    let signupemaildata = await User.findOne({ email: (signupdata.email) });
+    console.log(signupemaildata);
+    if (!signupemaildata) {
+        signupdata.save();
+        res.send("All Ok");
+    } else {
+        res.send("Email already exists");
+    }
+    // res.send("All Ok");
 })
 
 app.get("/login", (req, res) => {
