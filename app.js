@@ -159,7 +159,7 @@ app.post("/signup", async (req, res) => {
         signupdata.save();
         res.send("All Ok");
     } else {
-        res.send("Email already exists");
+        res.send("Email already exists. Try logging in.");
     }
     // res.send("All Ok");
 })
