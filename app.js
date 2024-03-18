@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const mongo_url = 'mongodb://127.0.0.1:27017/mentorship';
 // const mongo_url = process.env.ATLASDB_URL;
+const Job = require("./models/jobListing.js");
 const Listing = require("./models/listings.js");
 const Mentor = require("./models/mentorListing.js");
 const Contact = require("./models/contactListing.js");
@@ -51,6 +52,20 @@ app.get("/", (req, res) => {
     res.render("home.ejs");
 });
 
+app.get("/job", async (req, res) => {
+    let allJobs = await Job.find({});
+    console.log(allJobs);
+    res.render("job.ejs", { allJobs });
+});
+
+app.get("/job/:id/apply", async (req, res) => {
+    let { id } = req.params;
+    // console.log(id);
+    let showData = await Job.findById(id);
+    // console.log(showData);
+    res.render("applyjob.ejs", { showData });
+    // res.send("All Ok");
+})
 
 app.get("/mentor", async (req, res) => {
     let allListings = await Listing.find({});
@@ -144,6 +159,10 @@ app.post("/hackathon/admin/verification", async (req, res) => {
     // // console.log(abcd);
     // res.send(`Hello ${newapplier.name}. You have successfully applied for the hackathon`);
     // res.redirect("http://localhost:8080/hackathon");
+})
+
+app.get("/login", (req, res) => {
+    res.render("login.ejs");
 })
 
 app.get("/signup", (req, res) => {

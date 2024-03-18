@@ -606,3 +606,40 @@ footer>h5 {
     text-decoration: none;
     color: white;
 }
+
+.login-div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.login-row {
+    width: 65% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.log-col-6-off-3 {
+    width: 100% !important;
+}
+
+.btn,
+.btn {
+    height: 2.25rem;
+    width: 6.5rem;
+}
+
+.signup-btn,
+.login-btn {
+    height: 2.25rem !important;
+    width: 4.5rem !important;
+}
+
+.form-group>input,
+select {
+    height: 2.25rem !important;
+    border: 2.5px solid rgba(151, 145, 145, 0.4) !important;
+}
+
+.form-group>select {
+    width: 100% !important;
+}

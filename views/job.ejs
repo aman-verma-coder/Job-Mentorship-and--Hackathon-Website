@@ -1,0 +1,28 @@
+<% layout("/layout/boilerplate") -%>
+
+    <body>
+        <div class="cards row">
+            <% for (const job of allJobs) { %>
+                <div class="card cols-lg-3 row-cols-md-2 row-cols-sm-1">
+                    <!-- <img src="<%= job.image %>" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <div class="card-img-overlay"></div>
+                        <h5 class="card-title">
+                            Title: <%= job.title %>
+                        </h5>
+                        <p class="card-text">
+                            Skills: <%= job.skills %>
+                        </p>
+                        <p class="card-text">
+                            Experience: <%= job.experience %> years
+                        </p>
+                        <p class="card-text">
+                            Salary: <%= job.salary %>
+                        </p>
+                        <a href="/job/<%= job.id %>/apply" class="btn btn-default btn-success card-buy-btn hack-apply">Apply
+                            Now</a>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </body>
