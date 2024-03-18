@@ -1,46 +1,46 @@
 <% layout("/layout/boilerplate") -%>
 
-    <body>
-        <div class="container mt-3 login-div">
-            <div class="row login-row">
-                <div class="col-6 offset-3 log-col-6-off-3">
-                    <h2>Signup on Wanderlust</h2>
-                    <form action="/signup" method="post" class="needs-validation" novalidate>
-                        <div class="form-group mt-2">
-                            <label for="username">Username:</label>
-                            <input type="text" class="form-control" id="username" name="username"
-                                placeholder="Enter Username" required>
-                            <div class="valid-feedback">Looks Good!</div>
-                            <div class="invalid-feedback">This field can't be empty!</div>
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"
-                                required>
-                            <div class="valid-feedback">Looks Good!</div>
-                            <div class="invalid-feedback">This field can't be empty!</div>
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="email">A/C type:</label>
-                            <!-- <input type="email" class="form-control" id="email" name="email" required> -->
-                            <select name="accounttype" id="accounttype" class="form-select show-dropdown">
-                                <option value="selected">Select Account Type</option>
-                                <option value="Recruiter">Recruiter</option>
-                                <option value="Applier">Applier</option>
-                            </select>
-                            <!-- <div class="valid-feedback">Looks Good!</div>
-                            <div class="invalid-feedback">This field can't be empty!</div> -->
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="password">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password"
-                                placeholder="Enter Password" required>
-                            <div class="valid-feedback">Looks Good!</div>
-                            <div class="invalid-feedback">This field can't be empty!</div>
-                        </div>
-                        <button type="submit" class="btn signup-btn btn-default btn-success mt-4">Signup</button>
-                    </form>
-                </div>
+<body>
+    <div class="signup">
+        <h2>Signup</h2>
+        <form method="post" action="/signup">
+            <div class="mb-3">
+                <label for="signupname" class="form-label">Name:</label>
+                <input type="text" class="form-control" name="name" id="signupname" aria-describedby="signupname"
+                    placeholder="Enter Your Name">
             </div>
-        </div>
-    </body>
+            <div class="mb-3">
+                <label for="signupname" class="form-label">Contact Number:</label>
+                <input type="number" class="form-control" name="contact" id="signupname"
+                    aria-describedby="signupname" placeholder="Enter Your Contact Number">
+            </div>
+            <div class="mb-3">
+                <label for="accounttype" name="account" class="form-label">Account Type:</label>
+                <select class="form-control" name="account" id="accounttype" aria-describedby="accounttype">
+                    <!-- <option selected>Choose account type</option> -->
+                    <option value="Recruiter">Recruiter</option>
+                    <option value="Applier">Applier</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="signupemail" class="form-label">Email:</label>
+                <input type="email" class="form-control" name="email" id="signupemail" aria-describedby="emailHelp"
+                    placeholder="Enter Your Email">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password:</label>
+                <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+                    placeholder="Enter Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>

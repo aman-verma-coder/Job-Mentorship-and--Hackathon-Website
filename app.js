@@ -13,6 +13,7 @@ const Hack = require("./models/hackathonListing.js");
 const Appliedforhackathon = require("./models/applyListing.js");
 const { name } = require("ejs");
 const ejsMate = require('ejs-mate');
+const User = require("./models/usersignup.js");
 
 main()
     .then(() => { console.log("Connection Successful") })
@@ -167,6 +168,41 @@ app.get("/login", (req, res) => {
 
 app.get("/signup", (req, res) => {
     res.render("signup.ejs");
+})
+
+app.post("/signup", async (req, res) => {
+    let signupdata = new User(req.body);
+    let signupemaildata = await User.findOne({ email: (signupdata.email) });
+    console.log(signupemaildata);
+    if (!signupemaildata) {
+        signupdata.save();
+        res.send("All Ok");
+    } else {
+        res.send("Email already exists! Try logging in.");
+    }
+    // res.send("All Ok");
+})
+
+app.get("/login", (req, res) => {
+    res.render("login.ejs");
+})
+
+app.post("/login", async (req, res) => {
+    let logindata = req.body;
+    let userinfo = await User.findOne({ email: logindata.email });
+    console.log(userinfo);
+    console.log(logindata.password);
+    if (userinfo) {
+        console.log(userinfo.password);
+        if ((userinfo.email == logindata.email) && (userinfo.password == logindata.password)) {
+            res.send("All Ok");
+        } else {
+            res.send("Incorrect Email or Password");
+        }
+    } else {
+        res.send("User not found");
+    }
+    // res.send("All Ok");
 })
 
 app.listen(port, () => {
