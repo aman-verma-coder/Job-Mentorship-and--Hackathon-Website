@@ -1,9 +1,11 @@
 const express = require("express");
+const dotenv = require('dotenv');
+dotenv.config();
 const app = express();
-const port = 8080;
+const port = 3000;
 const mongoose = require("mongoose");
 const path = require("path");
-const mongo_url = 'mongodb://127.0.0.1:27017/mentorship';
+const mongo_url = `mongodb+srv://${process.env.ATLAS_USER}:${encodeURIComponent(process.env.ATLAS_PASS)}@${process.env.CLUSTER_URL}/mentorship?retryWrites=true&w=majority&appName=Cluster0`;
 // const mongo_url = process.env.ATLASDB_URL;
 const Listing = require("./models/listings.js");
 const Mentor = require("./models/mentorListing.js");
@@ -145,6 +147,10 @@ app.post("/hackathon/admin/verification", async (req, res) => {
     // // console.log(abcd);
     // res.send(`Hello ${newapplier.name}. You have successfully applied for the hackathon`);
     // res.redirect("http://localhost:8080/hackathon");
+})
+
+app.get("/job", (req, res) => {
+    res.send("Job Page");
 })
 
 app.get("/signup", (req, res) => {

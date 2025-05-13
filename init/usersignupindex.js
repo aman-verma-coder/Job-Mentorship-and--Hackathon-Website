@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const initdata = require("./usersignupdata.js");
 const User = require("../models/usersignup.js");
-const mongo_url = 'mongodb://127.0.0.1:27017/mentorship';
+const mongo_url = `mongodb+srv://${process.env.ATLAS_USER}:${encodeURIComponent(process.env.ATLAS_PASS)}@${process.env.CLUSTER_URL}/mentorship?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true`;
 
 main()
     .then(() => { console.log("Connected to DB") })
