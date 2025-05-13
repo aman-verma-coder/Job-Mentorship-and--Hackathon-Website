@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 const mongoose = require("mongoose");
 const path = require("path");
-const mongo_url = `mongodb+srv://${process.env.ATLAS_USER}:${encodeURIComponent(process.env.ATLAS_PASS)}@${process.env.CLUSTER_URL}/mentorship?retryWrites=true&w=majority&appName=Cluster0`;
+const mongo_url = `mongodb+srv://${process.env.ATLAS_USER}:${encodeURIComponent(process.env.ATLAS_PASS)}@${process.env.CLUSTER_URL}/mentorship?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true`;
 // const mongo_url = process.env.ATLASDB_URL;
 const Listing = require("./models/listings.js");
 const Mentor = require("./models/mentorListing.js");
@@ -23,9 +23,14 @@ main()
 
 async function main() {
     try {
-        await mongoose.connect(mongo_url);
+        await mongoose.connect(mongo_url, {
+            serverSelectionTimeoutMS: 30000,
+            socketTimeoutMS: 45000
+        });
+        console.log('MongoDB connected successfully');
     } catch (error) {
-        console.log(error);
+        console.error('MongoDB connection error:', error);
+        process.exit(1);
     }
 };
 
