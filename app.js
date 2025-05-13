@@ -1,11 +1,20 @@
 const express = require("express");
 const dotenv = require('dotenv');
 dotenv.config();
+
+// Validate required environment variables
+['ATLAS_USER', 'ATLAS_PASS', 'CLUSTER_URL'].forEach(v => {
+    if (!process.env[v]) {
+        console.error(`Missing required environment variable: ${v}`);
+        process.exit(1);
+    }
+});
+
 const app = express();
 const port = 3000;
 const mongoose = require("mongoose");
 const path = require("path");
-const mongo_url = `mongodb+srv://${process.env.ATLAS_USER}:${encodeURIComponent(process.env.ATLAS_PASS)}@${process.env.CLUSTER_URL}/mentorship?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true`;
+const mongo_url = `mongodb+srv://${process.env.ATLAS_USER}:${encodeURIComponent(process.env.ATLAS_PASS)}@${process.env.CLUSTER_URL}/mentorship?retryWrites=true&w=majority`;
 // const mongo_url = process.env.ATLASDB_URL;
 const Listing = require("./models/listings.js");
 const Mentor = require("./models/mentorListing.js");
@@ -22,6 +31,7 @@ main()
 
 
 async function main() {
+
     try {
         await mongoose.connect(mongo_url, {
             serverSelectionTimeoutMS: 30000,
